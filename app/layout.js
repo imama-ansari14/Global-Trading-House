@@ -39,7 +39,7 @@ export const metadata = {
     images: ["/logo.png"],
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/logo.png",
     apple: "/apple-touch-icon.png",
   },
 };
