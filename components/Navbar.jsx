@@ -69,15 +69,6 @@ export default function Navbar() {
           </ul>
 
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href={siteConfig.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-navy-900 font-semibold hover:text-brand-red transition-colors"
-            >
-              <MessageCircle size={20} />
-              WhatsApp
-            </a>
             <Link href="/contact" className="btn-primary !py-2.5 !px-5 text-sm">
               Get a Quote
             </Link>

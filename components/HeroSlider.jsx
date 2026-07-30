@@ -78,15 +78,6 @@ export default function HeroSlider() {
               <Link href="/contact" className="btn-primary">
                 Get a Quote
               </Link>
-              <a
-                href={siteConfig.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline-white"
-              >
-                <MessageCircle size={20} />
-                WhatsApp Us
-              </a>
             </div>
           </motion.div>
         </AnimatePresence>
