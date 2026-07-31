@@ -15,9 +15,9 @@ import {
 import HeroSlider from "@/components/HeroSlider";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
-import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialsSlider from "@/components/TestimonialsSlider";
+import StatsGrid from "@/components/StatsGrid";
 import products from "@/data/products";
-import testimonials from "@/data/testimonials";
 import siteConfig from "@/data/siteConfig";
 
 export const metadata = {
@@ -156,24 +156,9 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
-              <p className="text-4xl font-extrabold text-white mb-1">30+</p>
-              <p className="text-navy-300 text-sm">Countries Served</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
-              <p className="text-4xl font-extrabold text-white mb-1">5+</p>
-              <p className="text-navy-300 text-sm">Product Categories</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
-              <p className="text-4xl font-extrabold text-white mb-1">24/7</p>
-              <p className="text-navy-300 text-sm">Support Availability</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center">
-              <p className="text-4xl font-extrabold text-white mb-1">100%</p>
-              <p className="text-navy-300 text-sm">Direct Sourcing</p>
-            </div>
-          </div>
+
+        <StatsGrid />
+
         </div>
       </section>
 
@@ -231,11 +216,7 @@ export default function HomePage() {
             title="Trusted By Buyers Worldwide"
             subtitle="A few words from resellers and distributors we've worked with."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.name} testimonial={t} />
-            ))}
-          </div>
+          <TestimonialsSlider />
         </div>
       </section>
 
