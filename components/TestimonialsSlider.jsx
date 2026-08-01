@@ -79,21 +79,7 @@ export default function TestimonialsSlider() {
         </div>
       </div>
 
-      <button
-        aria-label="Previous testimonial"
-        onClick={() => handleManual(prev)}
-        className="hidden sm:flex absolute top-1/2 -left-5 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-card border border-navy-100 items-center justify-center text-navy-900 hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors"
-      >
-        <ChevronLeft size={20} />
-      </button>
-      <button
-        aria-label="Next testimonial"
-        onClick={() => handleManual(next)}
-        className="hidden sm:flex absolute top-1/2 -right-5 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-card border border-navy-100 items-center justify-center text-navy-900 hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors"
-      >
-        <ChevronRight size={20} />
-      </button>
-
+      {/* LEFT & RIGHT ARROWS */}
       <div className="flex sm:hidden justify-center gap-4 mt-6">
         <button
           aria-label="Previous testimonial"
