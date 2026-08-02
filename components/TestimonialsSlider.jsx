@@ -106,7 +106,7 @@ export default function TestimonialsSlider() {
             className={`h-2 rounded-full transition-all duration-300 ${
               i === index
                 ? "w-8 bg-brand-red"
-                : "w-2 bg-navy-100 hover:bg-navy-200"
+                : "w-2 bg-navy-500 hover:bg-navy-600"
             }`}
           />
         ))}

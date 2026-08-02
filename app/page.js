@@ -63,33 +63,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Core product categories */}
-      <section className="py-20 sm:py-28">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="What We Offer"
-            title="Our Core Product Categories"
-            subtitle="Bulk pallets across five in-demand categories — every listing graded and manifested before it ships."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <ProductCard key={p.slug} product={p} />
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/products" className="btn-secondary">
-              View All Products <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* About preview */}
       <section className="py-20 sm:py-28 bg-navy-50">
         <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden shadow-card">
             <Image
-              src="https://placehold.co/900x700/0A1930/FFFFFF?text=Global+Trading+House"
+              src="/brand-logos.png"
               alt="Global Trading House warehouse"
               fill
               className="object-cover"
@@ -117,6 +96,62 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Core product categories */}
+      <section className="py-20 sm:py-28">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="What We Offer"
+            title="Our Core Product Categories"
+            subtitle="Bulk pallets across five in-demand categories — every listing graded and manifested before it ships."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((p) => (
+              <ProductCard key={p.slug} product={p} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/products" className="btn-secondary">
+              View All Products <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 sm:py-28 bg-navy-50">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="Client Feedback"
+            title="Trusted By Buyers Worldwide"
+            subtitle="A few words from resellers and distributors we've worked with."
+          />
+          <TestimonialsSlider />
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="py-20 sm:py-28 bg-brand-navy">
+        <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <span className="section-eyebrow">Why Choose Us</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-8">
+              A Sourcing Partner You Can Rely On
+            </h2>
+            <ul className="space-y-4">
+              {whyChoose.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <ShieldCheck className="text-brand-red shrink-0 mt-0.5" size={22} />
+                  <span className="text-navy-100 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <StatsGrid />
+
+        </div>
+      </section>
+
       {/* What We Offer icons */}
       <section className="py-20 sm:py-28">
         <div className="container-page">
@@ -139,31 +174,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why choose us */}
-      <section className="py-20 sm:py-28 bg-brand-navy">
-        <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <span className="section-eyebrow">Why Choose Us</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-8">
-              A Sourcing Partner You Can Rely On
-            </h2>
-            <ul className="space-y-4">
-              {whyChoose.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <ShieldCheck className="text-brand-red shrink-0 mt-0.5" size={22} />
-                  <span className="text-navy-100 leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-        <StatsGrid />
-
-        </div>
-      </section>
-
       {/* How it works */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-navy-50 py-20 sm:py-28">
         <div className="container-page">
           <SectionHeading
             eyebrow="How It Works"
@@ -205,18 +217,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 sm:py-28 bg-navy-50">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="Client Feedback"
-            title="Trusted By Buyers Worldwide"
-            subtitle="A few words from resellers and distributors we've worked with."
-          />
-          <TestimonialsSlider />
         </div>
       </section>
 

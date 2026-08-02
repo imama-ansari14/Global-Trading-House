@@ -20,6 +20,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+    
       <section className="bg-brand-navy py-20 sm:py-28">
         <div className="container-page text-center max-w-3xl mx-auto">
           <span className="section-eyebrow">About {siteConfig.businessName}</span>
@@ -37,7 +38,7 @@ export default function AboutPage() {
         <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative h-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-card order-2 lg:order-1">
             <Image
-              src="https://placehold.co/900x800/0A1930/FFFFFF?text=Our+Warehouse"
+              src="/about-img.png"
               alt="Global Trading House warehouse operations"
               fill
               className="object-cover"

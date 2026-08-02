@@ -16,11 +16,12 @@ export default function TestimonialCard({ testimonial }) {
             />
           </div>
           <div>
-            <p className="font-bold text-navy-900 text-sm leading-tight">{testimonial.name}</p>
+            <p className="font-bold text-navy-900 text-sm leading-tight">
+              {testimonial.name}
+            </p>
             <p className="text-navy-400 text-xs">{testimonial.role}</p>
           </div>
         </div>
-        <Quote className="text-brand-red/25 shrink-0" size={28} />
       </div>
 
       <div className="flex gap-1 mb-3">
@@ -28,12 +29,18 @@ export default function TestimonialCard({ testimonial }) {
           <Star
             key={i}
             size={15}
-            className={i < testimonial.rating ? "fill-brand-red text-brand-red" : "text-navy-100"}
+            className={
+              i < testimonial.rating
+                ? "fill-amber-400 text-amber-400"
+                : "text-navy-100"
+            }
           />
         ))}
       </div>
 
-      <p className="text-navy-600 text-sm leading-relaxed flex-1">&ldquo;{testimonial.quote}&rdquo;</p>
+      <p className="text-navy-600 text-sm leading-relaxed flex-1">
+        &ldquo;{testimonial.quote}&rdquo;
+      </p>
     </div>
   );
 }

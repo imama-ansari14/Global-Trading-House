@@ -69,17 +69,15 @@ export default function Navbar() {
                   <Link
                     href={l.href}
                     className={`group relative inline-block py-1 font-bold transition-colors ${
-                      isActive
-                        ? "text-brand-red"
-                        : "text-navy-900 hover:text-brand-red"
+                      isActive ? "text-brand-red" : "text-navy-900"
                     }`}
                   >
                     {l.label}
-                    <span
-                      className={`absolute left-0 -bottom-0.5 h-[2px] bg-brand-red transition-all duration-300 ease-out ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
-                    />
+
+                    {/* Underline renders ONLY for inactive links on hover */}
+                    {!isActive && (
+                      <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-brand-red transition-all duration-300 ease-out group-hover:w-full" />
+                    )}
                   </Link>
                 </li>
               );
