@@ -18,6 +18,8 @@ import ProductCard from "@/components/ProductCard";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
 import StatsGrid from "@/components/StatsGrid";
 import products from "@/data/products";
+import { RevealImage, RevealText } from "@/components/RevealImage";
+import { OffersGrid, StepsGrid } from "@/components/AnimatedCards";
 import siteConfig from "@/data/siteConfig";
 
 export const metadata = {
@@ -66,15 +68,12 @@ export default function HomePage() {
       {/* About preview */}
       <section className="py-20 sm:py-28 bg-navy-50">
         <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
-          <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden shadow-card">
-            <Image
-              src="/brand-logos.png"
-              alt="Global Trading House warehouse"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div>
+          <RevealImage
+            src="/brand-logos.png"
+            alt="Global Trading House warehouse"
+            className="h-80 sm:h-96 rounded-2xl shadow-card"
+          />
+          <RevealText>
             <span className="section-eyebrow">About Our Company</span>
             <h2 className="section-heading mb-6">
               Sourcing In Bulk, Directly From America&rsquo;s Leading Retailers
@@ -92,7 +91,7 @@ export default function HomePage() {
             <Link href="/about" className="btn-primary">
               Learn More About Us <ArrowRight size={18} />
             </Link>
-          </div>
+          </RevealText>
         </div>
       </section>
 
@@ -152,7 +151,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What We Offer icons */}
+      {/* Why It Works */}
       <section className="py-20 sm:py-28">
         <div className="container-page">
           <SectionHeading
@@ -160,17 +159,7 @@ export default function HomePage() {
             title="Built For Serious Bulk Buyers"
             subtitle="Everything about how we operate is designed to make bulk sourcing simple and predictable."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {offers.map((o) => (
-              <div key={o.title} className="card p-7 text-center">
-                <div className="w-14 h-14 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center mx-auto mb-5">
-                  <o.icon size={26} />
-                </div>
-                <h3 className="font-bold text-navy-900 mb-2">{o.title}</h3>
-                <p className="text-navy-500 text-sm leading-relaxed">{o.desc}</p>
-              </div>
-            ))}
-          </div>
+          <OffersGrid />
         </div>
       </section>
 
@@ -182,20 +171,7 @@ export default function HomePage() {
             title="From Inquiry To Delivery, Simplified"
             subtitle="A straightforward four-step process, whether you're ordering one pallet or a full container."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((s, i) => (
-              <div key={s.title} className="relative text-center">
-                <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center mx-auto mb-5 shadow-card">
-                  <s.icon size={26} />
-                </div>
-                <h3 className="font-bold text-navy-900 mb-2">{s.title}</h3>
-                <p className="text-navy-500 text-sm leading-relaxed">{s.desc}</p>
-                {i < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-[60%] w-full h-px bg-navy-100" />
-                )}
-              </div>
-            ))}
-          </div>
+          <StepsGrid />
         </div>
       </section>
 

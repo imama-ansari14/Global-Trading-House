@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Target, Eye, ShieldCheck, Globe2, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import { RevealImage, RevealText } from "@/components/RevealImage";
 import siteConfig from "@/data/siteConfig";
 
 export const metadata = {
@@ -20,7 +21,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-    
+      {/* HEADER */}
       <section className="bg-brand-navy py-20 sm:py-28">
         <div className="container-page text-center max-w-3xl mx-auto">
           <span className="section-eyebrow">About {siteConfig.businessName}</span>
@@ -34,17 +35,15 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Our Story */}
       <section className="py-20 sm:py-28">
         <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
-          <div className="relative h-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-card order-2 lg:order-1">
-            <Image
-              src="/about-img.png"
-              alt="Global Trading House warehouse operations"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="order-1 lg:order-2">
+          <RevealImage
+            src="/about-img.png"
+            alt="Global Trading House warehouse operations"
+            className="h-80 sm:h-[420px] rounded-2xl shadow-card order-2 lg:order-1"
+          />
+          <RevealText className="order-1 lg:order-2">
             <span className="section-eyebrow">Our Story</span>
             <h2 className="section-heading mb-6">Built On Direct Retailer Relationships</h2>
             <p className="text-navy-500 leading-relaxed mb-4">
@@ -62,10 +61,11 @@ export default function AboutPage() {
               countries, supplying pallets across shoes, clothing, cosmetics, bags, and power tools —
               with new categories added as demand grows.
             </p>
-          </div>
+          </RevealText>
         </div>
       </section>
 
+      {/*  */}
       <section className="py-20 sm:py-28 bg-navy-50">
         <div className="container-page grid sm:grid-cols-2 gap-8">
           <div className="card p-9">
@@ -91,6 +91,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/*  Core Values */}
       <section className="py-20 sm:py-28">
         <div className="container-page">
           <SectionHeading
@@ -112,6 +113,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 bg-brand-red">
         <div className="container-page text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">

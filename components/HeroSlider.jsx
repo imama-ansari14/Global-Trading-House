@@ -4,28 +4,27 @@ import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
-import siteConfig from "@/data/siteConfig";
 
 const slides = [
   {
-    eyebrow: "Trusted Global Sourcing Partner",
-    title: "Bulk Pallets, Sourced Direct From Leading US Retailers",
+    // eyebrow: "Trusted Global Sourcing Partner",
+    title: "Bulk Pallets,Sourced From Leading US Retailers",
     subtitle:
-      "Shoes, clothes, cosmetics, bags & power tools — sourced in bulk and shipped worldwide with clear manifests and reliable freight.",
+      "Shoes, clothes, cosmetics, bags & power tools sourced in bulk and shipped worldwide with clear manifests and reliable freight.",
     bg: "from-brand-navy via-navy-800 to-navy-700",
   },
   {
-    eyebrow: "Shipped Worldwide",
+    // eyebrow: "Shipped Worldwide",
     title: "Buy Wholesale. Resell With Confidence.",
     subtitle:
-      "Every pallet is graded and manifested so you know exactly what you're buying before it ships — no surprises.",
+      "Every pallet is graded and manifested so you know exactly what you're buying before it ships no surprises.",
     bg: "from-navy-800 via-brand-navy to-navy-900",
   },
   {
-    eyebrow: "Investment Opportunities",
+    // eyebrow: "Investment Opportunities",
     title: "Grow Your Business With Bulk Liquidation",
     subtitle:
-      "From single pallets to full containers — we work with resellers, distributors, and investors at every scale.",
+      "From single pallets to full containers we work with resellers, distributors, and investors at every scale.",
     bg: "from-navy-900 via-navy-700 to-brand-navy",
   },
 ];
@@ -34,7 +33,10 @@ export default function HeroSlider() {
   const [index, setIndex] = useState(0);
 
   const next = useCallback(() => setIndex((i) => (i + 1) % slides.length), []);
-  const prev = useCallback(() => setIndex((i) => (i - 1 + slides.length) % slides.length), []);
+  const prev = useCallback(
+    () => setIndex((i) => (i - 1 + slides.length) % slides.length),
+    []
+  );
 
   useEffect(() => {
     const t = setInterval(next, 5500);
@@ -44,7 +46,9 @@ export default function HeroSlider() {
   const slide = slides[index];
 
   return (
-    <section className={`relative overflow-hidden bg-gradient-to-br ${slide.bg} transition-colors duration-700`}>
+    <section
+      className={`relative overflow-hidden bg-gradient-to-br ${slide.bg} transition-colors duration-700`}
+    >
       {/* decorative grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.07] pointer-events-none"
@@ -67,13 +71,15 @@ export default function HeroSlider() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="max-w-2xl"
           >
-            <span className="inline-block bg-brand-red text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+            {/* <span className="inline-block bg-brand-red text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
               {slide.eyebrow}
-            </span>
+            </span> */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
               {slide.title}
             </h1>
-            <p className="text-navy-100 text-lg leading-relaxed mb-9 max-w-xl">{slide.subtitle}</p>
+            <p className="text-navy-100 text-lg leading-relaxed mb-9 max-w-xl">
+              {slide.subtitle}
+            </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact" className="btn-primary">
                 Get a Quote
@@ -92,7 +98,9 @@ export default function HeroSlider() {
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => setIndex(i)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                i === index ? "w-8 bg-brand-red" : "w-2 bg-white/40 hover:bg-white/70"
+                i === index
+                  ? "w-8 bg-brand-red"
+                  : "w-2 bg-white/40 hover:bg-white/70"
               }`}
             />
           ))}
