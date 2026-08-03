@@ -22,8 +22,18 @@ export default function AboutPage() {
   return (
     <>
       {/* HEADER */}
-      <section className="bg-brand-navy py-20 sm:py-28">
-        <div className="container-page text-center max-w-3xl mx-auto">
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <Image
+          src="/about-header.png"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Overlay grey*/}
+        <div className="absolute inset-0 bg-gray-900/70" />
+
+        <div className="container-page relative z-10 text-center max-w-3xl mx-auto">
           <span className="section-eyebrow">About {siteConfig.businessName}</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
             A Direct Line To Bulk Wholesale Inventory
@@ -39,7 +49,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
           <RevealImage
-            src="/about-img.png"
+            src="/about-img1.png"
             alt="Global Trading House warehouse operations"
             className="h-80 sm:h-[420px] rounded-2xl shadow-card order-2 lg:order-1"
           />
