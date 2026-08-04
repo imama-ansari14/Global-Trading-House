@@ -22,6 +22,7 @@ const generalFaqs = [
 export default function ProductsPage() {
   return (
     <>
+      {/* HEADER */}
       <section className="bg-brand-navy py-20 sm:py-28">
         <div className="container-page text-center max-w-3xl mx-auto">
           <span className="section-eyebrow">Our Products</span>
@@ -35,6 +36,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* PRODUCTS */}
       <section className="py-20 sm:py-28">
         <div className="container-page">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
