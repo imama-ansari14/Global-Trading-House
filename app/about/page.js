@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Target, Eye, ShieldCheck, Globe2, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { RevealImage, RevealText } from "@/components/RevealImage";
+import { ValuesGrid } from "@/components/AnimatedCards";
 import siteConfig from "@/data/siteConfig";
 
 export const metadata = {
@@ -25,7 +26,7 @@ export default function AboutPage() {
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <Image
           src="/about-header.png"
-          alt=""
+          alt="warehouse image"
           fill
           priority
           className="object-cover"
@@ -49,7 +50,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
           <RevealImage
-            src="/about-img1.png"
+            src="/about-img.png"
             alt="Global Trading House warehouse operations"
             className="h-80 sm:h-[420px] rounded-2xl shadow-card order-2 lg:order-1"
           />
@@ -101,7 +102,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/*  Core Values */}
+      {/* Core Values */}
       <section className="py-20 sm:py-28">
         <div className="container-page">
           <SectionHeading
@@ -109,17 +110,7 @@ export default function AboutPage() {
             title="Our Core Values"
             subtitle="The principles behind every pallet we ship."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="card p-7 text-center">
-                <div className="w-14 h-14 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center mx-auto mb-5">
-                  <v.icon size={26} />
-                </div>
-                <h3 className="font-bold text-navy-900 mb-2">{v.title}</h3>
-                <p className="text-navy-500 text-sm leading-relaxed">{v.desc}</p>
-              </div>
-            ))}
-          </div>
+          <ValuesGrid />
         </div>
       </section>
 
