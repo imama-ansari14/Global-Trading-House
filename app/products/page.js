@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
@@ -23,8 +24,18 @@ export default function ProductsPage() {
   return (
     <>
       {/* HEADER */}
-      <section className="bg-brand-navy py-20 sm:py-28">
-        <div className="container-page text-center max-w-3xl mx-auto">
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <Image
+          src="/about-header.png"
+          alt="warehouse image"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Overlay grey */}
+        <div className="absolute inset-0 bg-gray-900/70" />
+
+        <div className="container-page relative z-10 text-center max-w-3xl mx-auto">
           <span className="section-eyebrow">Our Products</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
             Bulk Pallets, Every Category Graded

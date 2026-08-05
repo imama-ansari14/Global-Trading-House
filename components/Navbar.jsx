@@ -15,10 +15,15 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
+// strips a trailing slash (except root "/") so "/about/" === "/about"
+const normalize = (path) =>
+  path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const currentPath = normalize(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -44,14 +49,14 @@ export default function Navbar() {
         <nav className="container-page flex items-center justify-between h-20">
           <Link
             href="/"
-            className="flex items-center gap-3 shrink-0"
+            className="flex items-center shrink-0"
             onClick={() => setOpen(false)}
           >
             <Image
               src="/logo.png"
               alt={`${siteConfig.businessName} logo`}
-              width={52}
-              height={52}
+              width={65}
+              height={65}
               className="rounded-full"
               priority
             />
@@ -63,7 +68,7 @@ export default function Navbar() {
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-10">
             {links.map((l) => {
-              const isActive = pathname === l.href;
+              const isActive = currentPath === normalize(l.href);
               return (
                 <li key={l.href}>
                   <Link
@@ -140,7 +145,7 @@ export default function Navbar() {
 
               <ul className="flex flex-col px-6 py-6 gap-2">
                 {links.map((l) => {
-                  const isActive = pathname === l.href;
+                  const isActive = currentPath === normalize(l.href);
                   return (
                     <li key={l.href}>
                       <Link
@@ -149,7 +154,7 @@ export default function Navbar() {
                         className={`block py-3.5 pl-3 text-lg font-bold border-b border-navy-50 border-l-4 transition-colors ${
                           isActive
                             ? "text-brand-red border-l-brand-red"
-                            : "text-navy-900 border-l-transparent hover:text-brand-red"
+                            : "text-navy-900 border-l-transparent"
                         }`}
                       >
                         {l.label}
