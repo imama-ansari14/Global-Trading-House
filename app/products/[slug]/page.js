@@ -32,7 +32,7 @@ export default function ProductDetailPage({ params }) {
     {/* HEADER */}
 <section className="relative py-16 sm:py-20 overflow-hidden">
   <Image
-    src="/about-header.png"
+    src="/shoes-header.png"
     alt={product.name}
     fill
     priority
