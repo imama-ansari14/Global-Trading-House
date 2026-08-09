@@ -9,6 +9,7 @@ const products = [
     name: "Shoes Pallets",
     shortDesc: "Branded footwear pallets sourced direct from major retailers.",
     img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Shoes+Pallets",
+    headerImg: "/headers/shoes-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Shoes+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Shoes+2",
@@ -31,7 +32,8 @@ const products = [
     slug: "clothes",
     name: "Clothes Pallets",
     shortDesc: "Mixed apparel pallets — men's, women's & kids' clothing.",
-    img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Clothes+Pallets",
+    img: "/hoodie.png",
+    headerImg: "/headers/clothes-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Clothing+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Clothing+2",
@@ -55,6 +57,7 @@ const products = [
     name: "Cosmetics Pallets",
     shortDesc: "Beauty & personal care pallets from name-brand suppliers.",
     img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Cosmetics+Pallets",
+    headerImg: "/headers/cosmetics-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Cosmetics+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Cosmetics+2",
@@ -78,6 +81,7 @@ const products = [
     name: "Bags Pallets",
     shortDesc: "Handbags, backpacks & luggage — branded overstock lots.",
     img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Bags+Pallets",
+    headerImg: "/headers/bags-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Bags+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Bags+2",
@@ -101,6 +105,7 @@ const products = [
     name: "Power Tools Pallets",
     shortDesc: "Branded power tools & equipment — bulk liquidation lots.",
     img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Power+Tools",
+    headerImg: "/headers/powerTools-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Tools+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Tools+2",

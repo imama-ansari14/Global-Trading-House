@@ -29,30 +29,30 @@ export default function ProductDetailPage({ params }) {
 
   return (
     <>
-    {/* HEADER */}
-<section className="relative py-16 sm:py-20 overflow-hidden">
-  <Image
-    src="/shoes-header.png"
-    alt={product.name}
-    fill
-    priority
-    className="object-cover"
-  />
-  {/* Overlay grey */}
-  <div className="absolute inset-0 bg-gray-900/70" />
+      {/* HEADER */}
+      <section className="relative py-16 sm:py-20 overflow-hidden">
+        <Image
+          src={product.headerImg}
+          alt={product.name}
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Overlay grey */}
+        <div className="absolute inset-0 bg-gray-900/70" />
 
-  <div className="container-page relative z-10">
-    <div className="flex items-center gap-2 text-navy-300 text-sm mb-6">
-      <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-      <ChevronRight size={14} />
-      <span className="text-white font-medium">{product.name}</span>
-    </div>
-    <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight max-w-2xl">
-      {product.name}
-    </h1>
-    <p className="text-navy-100 text-lg mt-4 max-w-2xl">{product.shortDesc}</p>
-  </div>
-</section>
+        <div className="container-page relative z-10">
+          <div className="flex items-center gap-2 text-navy-300 text-sm mb-6">
+            <Link href="/products" className="hover:text-white transition-colors">Products</Link>
+            <ChevronRight size={14} />
+            <span className="text-white font-medium">{product.name}</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight max-w-2xl">
+            {product.name}
+          </h1>
+          <p className="text-navy-100 text-lg mt-4 max-w-2xl">{product.shortDesc}</p>
+        </div>
+      </section>
 
       {/* Gallery */}
       <section className="py-16 sm:py-20">
@@ -60,7 +60,12 @@ export default function ProductDetailPage({ params }) {
           <div className="grid sm:grid-cols-3 gap-5">
             {product.gallery.map((src, i) => (
               <div key={i} className="relative h-56 rounded-2xl overflow-hidden shadow-card">
-                <Image src={src} alt={`${product.name} ${i + 1}`} fill className="object-cover" />
+                <Image
+                  src={src}
+                  alt={`${product.name} ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
               </div>
             ))}
           </div>

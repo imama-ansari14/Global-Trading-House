@@ -58,6 +58,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* FAQs */}
       <section className="py-20 sm:py-28 bg-navy-50">
         <div className="container-page max-w-3xl">
           <SectionHeading
@@ -69,6 +70,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 bg-brand-red">
         <div className="container-page text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
