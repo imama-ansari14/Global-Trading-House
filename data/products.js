@@ -1,7 +1,6 @@
 // 📦 EDIT THIS FILE to add/update products.
 // To add product #6-10: copy an object below, change the fields, done —
 // a page is generated automatically at /products/your-slug.
-// Swap the placeholder "img" / "gallery" URLs for real photos when ready.
 
 const products = [
   {
@@ -14,6 +13,9 @@ const products = [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Shoes+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Shoes+2",
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Shoes+3",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Shoes+4",
+      "https://placehold.co/700x500/0A1930/FFFFFF?text=Shoes+5",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Shoes+6",
     ],
     description:
       "Our shoe pallets feature a mix of branded athletic, casual, and formal footwear sourced directly from leading US retailers. Each pallet is manifested by category and size run, giving buyers a clear picture of what they're purchasing before it ships.",
@@ -32,12 +34,16 @@ const products = [
     slug: "clothes",
     name: "Clothes Pallets",
     shortDesc: "Mixed apparel pallets — men's, women's & kids' clothing.",
-    img: "/hoodie.png",
+    img: "/clothes/hoodie.png",
+    hoverImg: "/clothes/hoodie-zoom.png",
     headerImg: "/headers/clothes-header.png",
     gallery: [
-      "https://placehold.co/700x500/0A1930/FFFFFF?text=Clothing+1",
-      "https://placehold.co/700x500/132A4D/FFFFFF?text=Clothing+2",
-      "https://placehold.co/700x500/0A1930/FFFFFF?text=Clothing+3",
+      "/clothes/hoodie.png",
+      "/clothes/black-trouser.png",
+      "/clothes/t-shirt.png",
+      "/clothes/jeans-front.png",
+      "/clothes/",
+      "/clothes/",
     ],
     description:
       "A broad selection of men's, women's, and kids' apparel — seasonal overstock, shelf pulls, and customer returns from top US retailers. Great margins for resale, thrift, and bin-store buyers.",
@@ -62,6 +68,9 @@ const products = [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Cosmetics+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Cosmetics+2",
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Cosmetics+3",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Cosmetics+4",
+      "https://placehold.co/700x500/0A1930/FFFFFF?text=Cosmetics+5",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Cosmetics+6",
     ],
     description:
       "Name-brand skincare, makeup, haircare, and personal-care overstock sourced from major retail liquidation. Ideal for resale platforms, discount retailers, and beauty supply stores.",
@@ -81,11 +90,15 @@ const products = [
     name: "Bags Pallets",
     shortDesc: "Handbags, backpacks & luggage — branded overstock lots.",
     img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Bags+Pallets",
+    hoverImg: "https://placehold.co/800x600/132A4D/FFFFFF?text=Bags+Pallets", // TODO: replace once real photos are added to /public/bags/
     headerImg: "/headers/bags-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Bags+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Bags+2",
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Bags+3",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Bags+4",
+      "https://placehold.co/700x500/0A1930/FFFFFF?text=Bags+5",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Bags+6",
     ],
     description:
       "Handbags, backpacks, travel bags, and luggage sourced from leading retailers' overstock and return channels. A strong category for resale marketplaces and discount storefronts.",
@@ -110,6 +123,9 @@ const products = [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Tools+1",
       "https://placehold.co/700x500/132A4D/FFFFFF?text=Tools+2",
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Tools+3",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Tools+4",
+      "https://placehold.co/700x500/0A1930/FFFFFF?text=Tools+5",
+      "https://placehold.co/700x500/132A4D/FFFFFF?text=Tools+6",
     ],
     description:
       "Power tools, hand tools, and hardware equipment sourced from major retailer liquidation and customer returns. A high-demand category for resale, auction, and hardware resellers.",
