@@ -42,7 +42,7 @@ const products = [
       "/clothes/black-trouser.png",
       "/clothes/t-shirt.png",
       "/clothes/jeans-front.png",
-      "/clothes/",
+      "/clothes/denim-jacket.png",
       "/clothes/",
     ],
     description:
