@@ -34,8 +34,8 @@ const products = [
     slug: "clothes",
     name: "Clothes Pallets",
     shortDesc: "Mixed apparel pallets — men's, women's & kids' clothing.",
-    img: "/clothes/hoodie.png",
-    hoverImg: "/clothes/hoodie-zoom.png",
+    img: "/clothes/denim-jacket.png",
+    hoverImg: "/clothes/brown-coat.png",
     headerImg: "/headers/clothes-header.png",
     gallery: [
       "/clothes/hoodie.png",
@@ -43,7 +43,7 @@ const products = [
       "/clothes/t-shirt.png",
       "/clothes/jeans-front.png",
       "/clothes/denim-jacket.png",
-      "/clothes/",
+      "/clothes/brown-coat.png",
     ],
     description:
       "A broad selection of men's, women's, and kids' apparel — seasonal overstock, shelf pulls, and customer returns from top US retailers. Great margins for resale, thrift, and bin-store buyers.",
@@ -63,6 +63,7 @@ const products = [
     name: "Cosmetics Pallets",
     shortDesc: "Beauty & personal care pallets from name-brand suppliers.",
     img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Cosmetics+Pallets",
+    hoverImg: "/clothes/brown-coat.png",
     headerImg: "/headers/cosmetics-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Cosmetics+1",
@@ -117,7 +118,8 @@ const products = [
     slug: "power-tools",
     name: "Power Tools Pallets",
     shortDesc: "Branded power tools & equipment — bulk liquidation lots.",
-    img: "https://placehold.co/800x600/0A1930/FFFFFF?text=Power+Tools",
+    img: "/powerTools/drill.png",
+    hoverImg: "/clothes/brown-coat.png",
     headerImg: "/headers/powerTools-header.png",
     gallery: [
       "https://placehold.co/700x500/0A1930/FFFFFF?text=Tools+1",
