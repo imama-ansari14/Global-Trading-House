@@ -58,15 +58,20 @@ export default function ProductDetailPage({ params }) {
       <section className="py-16 sm:py-20">
         <div className="container-page">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {product.gallery.map((src, i) => (
+            {product.gallery.map((item, i) => (
               <div key={i} className="group relative h-56 rounded-2xl overflow-hidden shadow-card">
                 <Image
-                  src={src}
+                  src={item.img}
                   alt={`${product.name} ${i + 1}`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-opacity duration-500 group-hover:opacity-0"
                 />
-                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-colors duration-500" />
+                <Image
+                  src={item.hoverImg}
+                  alt={`${product.name} ${i + 1} alternate view`}
+                  fill
+                  className="object-cover absolute inset-0 opacity-0 scale-105 transition-opacity duration-500 group-hover:opacity-100"
+                />
               </div>
             ))}
           </div>
