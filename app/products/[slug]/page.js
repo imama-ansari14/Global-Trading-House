@@ -39,7 +39,7 @@ export default function ProductDetailPage({ params }) {
           className="object-cover"
         />
         {/* Overlay grey */}
-        <div className="absolute inset-0 bg-gray-900/70" />
+        <div className="absolute inset-0 bg-gray-800/60" />
 
         <div className="container-page relative z-10">
           <div className="flex items-center gap-2 text-navy-300 text-sm mb-6">
