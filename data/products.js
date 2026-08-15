@@ -91,12 +91,12 @@ const products = [
     hoverImg: "/bags/brown-bag.png",
     headerImg: "/headers/bags-header.png",
     gallery: [
-      { img: "/bags/bag-1.png", hoverImg: "/bags/bag-1-alt.png" },
-      { img: "/bags/bag-2.png", hoverImg: "/bags/bag-2-alt.png" },
-      { img: "/bags/bag-3.png", hoverImg: "/bags/bag-3-alt.png" },
-      { img: "/bags/bag-4.png", hoverImg: "/bags/bag-4-alt.png" },
-      { img: "/bags/bag-5.png", hoverImg: "/bags/bag-5-alt.png" },
-      { img: "/bags/bag-6.png", hoverImg: "/bags/bag-6-alt.png" },
+      { img: "/bags/crossBody.png", hoverImg: "/bags/crossBody-open.png" },
+      { img: "/bags/brown-bag.png", hoverImg: "/bags/brown-bag-open.png" },
+      { img: "/bags/suitcase.png", hoverImg: "/bags/suitcase-open.png" },
+      { img: "/bags/bagPack.png", hoverImg: "/bags/bagPack-open.png" },
+      { img: "/bags/whiteBag.png", hoverImg: "/bags/whiteBag-open.png" },
+      { img: "/bags/pouch.png", hoverImg: "/bags/pouch-open.png" },
     ],
     description:
       "Handbags, backpacks, travel bags, and luggage sourced from leading retailers' overstock and return channels. A strong category for resale marketplaces and discount storefronts.",

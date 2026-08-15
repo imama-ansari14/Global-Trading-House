@@ -1,7 +1,7 @@
 // ⚙️ EDIT THIS FILE to update business info site-wide.
 // Every page pulls from here, so you only need to change it once.
 const siteConfig = {
-  businessName: "Global Trading House LLC",
+  businessName: "Global Trading House LLC USA",
   tagline: "Bulk Sourcing. Direct From Leading US Retailers.",
   domain: "https://www.globaltradinghouseusa.com", // TODO: replace with real domain
   phoneDisplay: "+1 (202) 676-6624",
