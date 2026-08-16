@@ -59,8 +59,8 @@ const products = [
     slug: "cosmetics",
     name: "Cosmetics Pallets",
     shortDesc: "Beauty & personal care pallets from name-brand suppliers.",
-    img: "/cosmetics/cosmetic-1.png",
-    hoverImg: "/cosmetics/cosmetic-1-alt.png",
+    img: "/cosmetics/cosmetic-6.png",
+    hoverImg: "/cosmetics/cosmetic-6-alt.png",
     headerImg: "/headers/cosmetics-header.png",
     gallery: [
       { img: "/cosmetics/cosmetic-1.png", hoverImg: "/cosmetics/cosmetic-1-alt.png" },
