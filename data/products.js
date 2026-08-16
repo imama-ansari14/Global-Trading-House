@@ -7,11 +7,11 @@ const products = [
     hoverImg: "/shoes/shoe-1-alt.png",
     headerImg: "/headers/shoes-header.png",
     gallery: [
-      { img: "/shoes/shoe-1.png", hoverImg: "/shoes/shoe-1-alt.png" },
-      { img: "/shoes/shoe-2.png", hoverImg: "/shoes/shoe-2-alt.png" },
-      { img: "/shoes/shoe-3.png", hoverImg: "/shoes/shoe-3-alt.png" },
-      { img: "/shoes/shoe-4.png", hoverImg: "/shoes/shoe-4-alt.png" },
-      { img: "/shoes/shoe-5.png", hoverImg: "/shoes/shoe-5-alt.png" },
+      { img: "/shoes/white-shoes.png", hoverImg: "/shoes/white-shoes-close.png" },
+      { img: "/shoes/brown-shoes.png", hoverImg: "/shoes/brown-shoes-close.png" },
+      { img: "/shoes/orange-shoes.png", hoverImg: "/shoes/orange-shoes-close.png" },
+      { img: "/shoes/boots.png", hoverImg: "/shoes/boots-close.png" },
+      { img: "/shoes/sneakers.png", hoverImg: "/shoes/sneakers-close.png" },
       { img: "/shoes/shoe-6.png", hoverImg: "/shoes/shoe-6-alt.png" },
     ],
     description:
