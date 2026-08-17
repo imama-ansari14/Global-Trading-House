@@ -3,16 +3,16 @@ const products = [
     slug: "shoes",
     name: "Shoes Pallets",
     shortDesc: "Branded footwear pallets sourced direct from major retailers.",
-    img: "/shoes/shoe-1.png",
-    hoverImg: "/shoes/shoe-1-alt.png",
-    headerImg: "/headers/shoes-header.png",
+    img: "/shoes/orange-shoes.png",
+    hoverImg: "/shoes/blue-shoes-close.png",
+    headerImg: "/ProductsHeaders/shoes-header.png",
     gallery: [
       { img: "/shoes/white-shoes.png", hoverImg: "/shoes/white-shoes-close.png" },
       { img: "/shoes/brown-shoes.png", hoverImg: "/shoes/brown-shoes-close.png" },
       { img: "/shoes/orange-shoes.png", hoverImg: "/shoes/orange-shoes-close.png" },
       { img: "/shoes/boots.png", hoverImg: "/shoes/boots-close.png" },
       { img: "/shoes/sneakers.png", hoverImg: "/shoes/sneakers-close.png" },
-      { img: "/shoes/shoe-6.png", hoverImg: "/shoes/shoe-6-alt.png" },
+      { img: "/shoes/blue-shoes.png", hoverImg: "/shoes/blue-shoes-close.png" },
     ],
     description:
       "Our shoe pallets feature a mix of branded athletic, casual, and formal footwear sourced directly from leading US retailers. Each pallet is manifested by category and size run, giving buyers a clear picture of what they're purchasing before it ships.",
@@ -33,7 +33,7 @@ const products = [
     shortDesc: "Mixed apparel pallets — men's, women's & kids' clothing.",
     img: "/clothes/denim-jacket.png",
     hoverImg: "/clothes/brown-coat.png",
-    headerImg: "/headers/clothes-header.png",
+    headerImg: "/ProductsHeaders/clothes-header.png",
     gallery: [
       { img: "/clothes/hoodie.png", hoverImg: "/clothes/hoodie-zoomed.png" },
       { img: "/clothes/black-trouser.png", hoverImg: "/clothes/black-trouser-zoomed.png" },
@@ -61,7 +61,7 @@ const products = [
     shortDesc: "Beauty & personal care pallets from name-brand suppliers.",
     img: "/cosmetics/cosmetic-6.png",
     hoverImg: "/cosmetics/cosmetic-6-alt.png",
-    headerImg: "/headers/cosmetics-header.png",
+    headerImg: "/ProductsHeaders/cosmetics-header.png",
     gallery: [
       { img: "/cosmetics/cosmetic-1.png", hoverImg: "/cosmetics/cosmetic-1-alt.png" },
       { img: "/cosmetics/cosmetic-2.png", hoverImg: "/cosmetics/cosmetic-2-alt.png" },
@@ -89,7 +89,7 @@ const products = [
     shortDesc: "Handbags, backpacks & luggage — branded overstock lots.",
     img: "/bags/crossBody.png",
     hoverImg: "/bags/brown-bag.png",
-    headerImg: "/headers/bags-header.png",
+    headerImg: "/ProductsHeaders/bags-header.png",
     gallery: [
       { img: "/bags/crossBody.png", hoverImg: "/bags/crossBody-open.png" },
       { img: "/bags/brown-bag.png", hoverImg: "/bags/brown-bag-open.png" },
@@ -117,7 +117,7 @@ const products = [
     shortDesc: "Branded power tools & equipment — bulk liquidation lots.",
     img: "/PowerTools/hammer.png",
     hoverImg: "/PowerTools/grinder.png",
-    headerImg: "/headers/powerTools-header.png",
+    headerImg: "/ProductsHeaders/powerTools-header.png",
     gallery: [
       { img: "/PowerTools/blade.png", hoverImg: "/PowerTools/blade-zoomed.png" },
       { img: "/PowerTools/hammer.png", hoverImg: "/PowerTools/hammer-zoomed.png" },

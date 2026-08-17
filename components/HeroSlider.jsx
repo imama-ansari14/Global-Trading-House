@@ -7,21 +7,18 @@ import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 
 const slides = [
   {
-    // eyebrow: "Trusted Global Sourcing Partner",
     title: "Bulk Pallets,Sourced From Leading US Retailers",
     subtitle:
       "Shoes, clothes, cosmetics, bags & power tools sourced in bulk and shipped worldwide with clear manifests and reliable freight.",
     bg: "from-brand-navy via-navy-800 to-navy-700",
   },
   {
-    // eyebrow: "Shipped Worldwide",
     title: "Buy Wholesale. Resell With Confidence.",
     subtitle:
       "Every pallet is graded and manifested so you know exactly what you're buying before it ships no surprises.",
     bg: "from-navy-800 via-brand-navy to-navy-900",
   },
   {
-    // eyebrow: "Investment Opportunities",
     title: "Grow Your Business With Bulk Liquidation",
     subtitle:
       "From single pallets to full containers we work with resellers, distributors, and investors at every scale.",
@@ -71,9 +68,6 @@ export default function HeroSlider() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="max-w-2xl"
           >
-            {/* <span className="inline-block bg-brand-red text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-              {slide.eyebrow}
-            </span> */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
               {slide.title}
             </h1>
