@@ -2,27 +2,28 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    title: "Bulk Pallets,Sourced From Leading US Retailers",
+    title: "Bulk Pallets, Sourced From Leading US Retailers",
     subtitle:
       "Shoes, clothes, cosmetics, bags & power tools sourced in bulk and shipped worldwide with clear manifests and reliable freight.",
-    bg: "from-brand-navy via-navy-800 to-navy-700",
+    bg: "/hero/hero-1.png",
   },
   {
     title: "Buy Wholesale. Resell With Confidence.",
     subtitle:
-      "Every pallet is graded and manifested so you know exactly what you're buying before it ships no surprises.",
-    bg: "from-navy-800 via-brand-navy to-navy-900",
+      "Every pallet is graded and manifested so you know exactly what you're buying before it ships — no surprises.",
+    bg: "/hero/hero-2.jpg",
   },
   {
     title: "Grow Your Business With Bulk Liquidation",
     subtitle:
       "From single pallets to full containers we work with resellers, distributors, and investors at every scale.",
-    bg: "from-navy-900 via-navy-700 to-brand-navy",
+    bg: "/hero/hero-3.jpg",
   },
 ];
 
@@ -43,22 +44,25 @@ export default function HeroSlider() {
   const slide = slides[index];
 
   return (
-    <section
-      className={`relative overflow-hidden bg-gradient-to-br ${slide.bg} transition-colors duration-700`}
-    >
-      {/* decorative grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.07] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-red/20 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -left-24 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+    <section className="relative overflow-hidden h-[600px] sm:h-[560px] lg:h-[620px]">
+      {/* Background images — stacked, crossfade via opacity */}
+      {slides.map((s, i) => (
+        <Image
+          key={s.bg}
+          src={s.bg}
+          alt="hero background"
+          fill
+          priority={i === 0}
+          className={`object-cover transition-opacity duration-700 ${
+            i === index ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
 
-      <div className="container-page relative py-24 sm:py-32 lg:py-36 min-h-[560px] flex items-center">
+      {/* Overlay — keeps white text readable over any photo */}
+      <div className="absolute inset-0 bg-navy-900/60" />
+
+      <div className="container-page relative z-10 h-full py-16 sm:py-20 flex items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -84,7 +88,7 @@ export default function HeroSlider() {
       </div>
 
       {/* controls */}
-      <div className="absolute bottom-8 left-0 right-0 container-page flex items-center justify-between">
+      <div className="absolute bottom-8 left-0 right-0 container-page z-10 flex items-center justify-between">
         <div className="flex gap-2">
           {slides.map((_, i) => (
             <button
