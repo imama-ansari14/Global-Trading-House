@@ -38,9 +38,12 @@ export default function ContactForm() {
     return (
       <div className="flex flex-col items-center text-center py-10">
         <CheckCircle2 className="text-brand-red mb-4" size={48} />
-        <h3 className="text-xl font-extrabold text-navy-900 mb-2">Message Sent</h3>
+        <h3 className="text-xl font-extrabold text-navy-900 mb-2">
+          Message Sent
+        </h3>
         <p className="text-navy-500">
-          Thanks for reaching out — we&rsquo;ll get back to you as soon as possible.
+          Thanks for reaching out — we&rsquo;ll get back to you as soon as
+          possible.
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -56,7 +59,10 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="name" className="block text-sm font-bold text-navy-900 mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-bold text-navy-900 mb-2"
+          >
             Full Name
           </label>
           <input
@@ -71,7 +77,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-bold text-navy-900 mb-2">
+          <label
+            htmlFor="phone"
+            className="block text-sm font-bold text-navy-900 mb-2"
+          >
             Phone / WhatsApp
           </label>
           <input
@@ -87,7 +96,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-bold text-navy-900 mb-2">
+        <label
+          htmlFor="email"
+          className="block text-sm font-bold text-navy-900 mb-2"
+        >
           Email Address
         </label>
         <input
@@ -103,7 +115,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-bold text-navy-900 mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-bold text-navy-900 mb-2"
+        >
           Message
         </label>
         <textarea
@@ -113,7 +128,7 @@ export default function ContactForm() {
           rows={5}
           value={values.message}
           onChange={handleChange}
-          placeholder="Tell us what you're looking for — product category, quantity, and destination."
+          placeholder="Tell us what you're looking for product category, quantity, and destination."
           className="w-full rounded-lg border border-navy-100 px-4 py-3 text-navy-900 placeholder:text-navy-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition resize-none"
         />
       </div>
@@ -125,8 +140,14 @@ export default function ContactForm() {
         </div>
       )}
 
-      <button type="submit" disabled={status === "loading"} className="btn-primary w-full disabled:opacity-60">
-        {status === "loading" ? "Sending..." : (
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="btn-primary w-full disabled:opacity-60"
+      >
+        {status === "loading" ? (
+          "Sending..."
+        ) : (
           <>
             Send Message <Send size={18} />
           </>

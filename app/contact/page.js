@@ -22,7 +22,7 @@ export default function ContactPage() {
     {/* HEADER */}
 <section className="relative py-20 sm:py-28 overflow-hidden">
   <Image
-    src="/about-header.png"
+    src="/pagesHeader/about-header.png"
     alt="warehouse image"
     fill
     priority
@@ -32,12 +32,12 @@ export default function ContactPage() {
   <div className="absolute inset-0 bg-gray-900/70" />
 
   <div className="container-page relative z-10 text-center max-w-3xl mx-auto">
-    <span className="section-eyebrow">Get In Touch</span>
+    {/* <span className="section-eyebrow">Get In Touch</span> */}
     <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
-      Let&rsquo;s Talk Bulk Sourcing
+      INQUIRY FORM
     </h1>
     <p className="text-navy-100 text-lg leading-relaxed">
-      Have a question about pricing, a manifest, or shipping? We&rsquo;re available 24/7 —
+      Have a question about pricing, a manifest, or shipping? We&rsquo;re available 24/7
       reach out and we&rsquo;ll get back to you quickly.
     </p>
   </div>
