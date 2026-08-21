@@ -1,17 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import Swal from "sweetalert2";
+import { Send } from "lucide-react";
 import siteConfig from "@/data/siteConfig";
 
 const initialState = { name: "", email: "", phone: "", message: "" };
 
 export default function ContactForm() {
   const [values, setValues] = useState(initialState);
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle"); // idle | loading
 
   const handleChange = (e) => {
-    setValues((v) => ({ ...v, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    const cleanValue = name === "name" ? value.replace(/[0-9]/g, "") : value;
+
+    setValues((v) => ({ ...v, [name]: cleanValue }));
   };
 
   const handleSubmit = async (e) => {
@@ -23,37 +27,34 @@ export default function ContactForm() {
         headers: { Accept: "application/json" },
         body: new FormData(e.target),
       });
+
       if (res.ok) {
-        setStatus("success");
         setValues(initialState);
+        await Swal.fire({
+          icon: "success",
+          title: "Message Sent",
+          text: "Thanks for reaching out we'll get back to you as soon as possible.",
+          confirmButtonColor: "#DC0000",
+        });
       } else {
-        setStatus("error");
+        await Swal.fire({
+          icon: "error",
+          title: "Something Went Wrong",
+          text: "We couldn't send your message. Please try again or reach us on WhatsApp.",
+          confirmButtonColor: "#DC0000",
+        });
       }
     } catch (err) {
-      setStatus("error");
+      await Swal.fire({
+        icon: "error",
+        title: "Something Went Wrong",
+        text: "We couldn't send your message. Please try again or reach us on WhatsApp.",
+        confirmButtonColor: "#DC0000",
+      });
+    } finally {
+      setStatus("idle");
     }
   };
-
-  if (status === "success") {
-    return (
-      <div className="flex flex-col items-center text-center py-10">
-        <CheckCircle2 className="text-brand-red mb-4" size={48} />
-        <h3 className="text-xl font-extrabold text-navy-900 mb-2">
-          Message Sent
-        </h3>
-        <p className="text-navy-500">
-          Thanks for reaching out — we&rsquo;ll get back to you as soon as
-          possible.
-        </p>
-        <button
-          onClick={() => setStatus("idle")}
-          className="mt-6 font-bold text-brand-red hover:underline"
-        >
-          Send another message
-        </button>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -63,7 +64,7 @@ export default function ContactForm() {
             htmlFor="name"
             className="block text-sm font-bold text-navy-900 mb-2"
           >
-            Full Name
+            Full Name <span className="text-brand-red">*</span>
           </label>
           <input
             id="name"
@@ -81,12 +82,13 @@ export default function ContactForm() {
             htmlFor="phone"
             className="block text-sm font-bold text-navy-900 mb-2"
           >
-            Phone / WhatsApp
+            Phone / WhatsApp <span className="text-brand-red">*</span>
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
+            required
             value={values.phone}
             onChange={handleChange}
             placeholder="+1 (000) 000-0000"
@@ -100,7 +102,7 @@ export default function ContactForm() {
           htmlFor="email"
           className="block text-sm font-bold text-navy-900 mb-2"
         >
-          Email Address
+          Email Address <span className="text-brand-red">*</span>
         </label>
         <input
           id="email"
@@ -119,7 +121,7 @@ export default function ContactForm() {
           htmlFor="message"
           className="block text-sm font-bold text-navy-900 mb-2"
         >
-          Message
+          Message <span className="text-brand-red">*</span>
         </label>
         <textarea
           id="message"
@@ -132,13 +134,6 @@ export default function ContactForm() {
           className="w-full rounded-lg border border-navy-100 px-4 py-3 text-navy-900 placeholder:text-navy-300 focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent transition resize-none"
         />
       </div>
-
-      {status === "error" && (
-        <div className="flex items-center gap-2 text-brand-red text-sm font-medium">
-          <AlertCircle size={18} />
-          Something went wrong. Please try again or message us on WhatsApp.
-        </div>
-      )}
 
       <button
         type="submit"

@@ -15,7 +15,6 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-// strips a trailing slash (except root "/") so "/about/" === "/about"
 const normalize = (path) =>
   path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
 
@@ -55,25 +54,25 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt={`${siteConfig.businessName} logo`}
-              width={65}
-              height={65}
-              className="rounded-full"
+              width={80}
+              height={80}
+              className="rounded-full w-[65px] h-[65px] lg:w-[80px] lg:h-[80px]"
               priority
             />
-            <span className="hidden sm:block font-extrabold text-navy-900 text-lg leading-tight tracking-tight">
+            <span className="hidden sm:block font-extrabold text-navy-900 text-lg lg:text-xl leading-tight tracking-tight">
               {siteConfig.businessName}
             </span>
           </Link>
 
-          {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-10">
+          {/* Desktop links — now only shown at lg (1024px) and up */}
+          <ul className="hidden lg:flex items-center gap-10">
             {links.map((l) => {
               const isActive = currentPath === normalize(l.href);
               return (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className={`group relative inline-block py-1 font-bold transition-colors ${
+                    className={`group relative inline-block py-1 font-bold text-[18px] transition-colors ${
                       isActive ? "text-brand-red" : "text-navy-900"
                     }`}
                   >
@@ -81,7 +80,7 @@ export default function Navbar() {
 
                     {/* Underline renders ONLY for inactive links on hover */}
                     {!isActive && (
-                      <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-brand-red transition-all duration-300 ease-out group-hover:w-full" />
+                      <span className="absolute left-0 bottom-[6px] h-[3px] w-0 bg-brand-red transition-all duration-300 ease-out group-hover:w-full" />
                     )}
                   </Link>
                 </li>
@@ -89,24 +88,27 @@ export default function Navbar() {
             })}
           </ul>
 
-          <div className="hidden md:flex items-center gap-3">
-            <Link href="/contact" className="btn-primary !py-2.5 !px-5 text-sm">
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="btn-primary !py-2.5 !px-5 text-base"
+            >
               Get a Quote
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Hamburger — shows on mobile AND tablet*/}
           <button
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="md:hidden p-2 -mr-2 text-navy-900"
+            className="lg:hidden p-2 -mr-2 text-navy-900"
           >
             <Menu size={30} />
           </button>
         </nav>
       </header>
 
-      {/* Mobile sidebar */}
+      {/* Sidebar — now used for mobile AND tablet */}
       <AnimatePresence>
         {open && (
           <>

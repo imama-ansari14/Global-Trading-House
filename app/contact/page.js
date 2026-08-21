@@ -19,29 +19,28 @@ const infoItems = [
 export default function ContactPage() {
   return (
     <>
-    {/* HEADER */}
-<section className="relative py-20 sm:py-28 overflow-hidden">
-  <Image
-    src="/pagesHeader/about-header.png"
-    alt="warehouse image"
-    fill
-    priority
-    className="object-cover"
-  />
-  {/* Overlay grey */}
-  <div className="absolute inset-0 bg-gray-900/70" />
+      {/* HEADER */}
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <Image
+          src="/pagesHeader/contact-header.png"
+          alt="contact image"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Overlay grey */}
+        <div className="absolute inset-0 bg-gray-800/50" />
 
-  <div className="container-page relative z-10 text-center max-w-3xl mx-auto">
-    {/* <span className="section-eyebrow">Get In Touch</span> */}
-    <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
-      INQUIRY FORM
-    </h1>
-    <p className="text-navy-100 text-lg leading-relaxed">
-      Have a question about pricing, a manifest, or shipping? We&rsquo;re available 24/7
-      reach out and we&rsquo;ll get back to you quickly.
-    </p>
-  </div>
-</section>
+        <div className="container-page relative z-10 text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+            INQUIRY FORM
+          </h1>
+          <p className="text-navy-100 text-lg leading-relaxed">
+            Have a question about pricing, a manifest, or shipping? We&rsquo;re available 24/7
+            reach out and we&rsquo;ll get back to you quickly.
+          </p>
+        </div>
+      </section>
 
       <section className="py-20 sm:py-28">
         <div className="container-page grid lg:grid-cols-[1fr,1.3fr] gap-14">
