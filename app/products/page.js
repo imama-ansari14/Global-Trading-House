@@ -26,7 +26,7 @@ export default function ProductsPage() {
       {/* HEADER */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <Image
-          src="/pagesHeader/products-header.png"
+          src="/PagesHeader/products-header.png"
           alt="Products image"
           fill
           priority

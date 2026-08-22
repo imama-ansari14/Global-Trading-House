@@ -25,7 +25,7 @@ export default function AboutPage() {
       {/* HEADER */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <Image
-          src="/pagesHeader/about-header.png"
+          src="/PagesHeader/about-header.png"
           alt="warehouse image"
           fill
           priority

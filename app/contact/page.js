@@ -22,7 +22,7 @@ export default function ContactPage() {
       {/* HEADER */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <Image
-          src="/pagesHeader/contact-header.png"
+          src="/PagesHeader/contact-header.png"
           alt="contact image"
           fill
           priority

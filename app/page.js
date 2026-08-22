@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   ShieldCheck,
   Globe2,
-  Truck,
   Handshake,
   PackageCheck,
   MessageCircle,
