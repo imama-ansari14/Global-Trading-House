@@ -11,19 +11,19 @@ const slides = [
     title: "Bulk Pallets and containers, Sourced From Leading US Retailers",
     subtitle:
       "Shoes, clothes, cosmetics, bags & power tools sourced in bulk and shipped worldwide with clear manifests and reliable freight.",
-    bg: "/hero/hero-1.png",
+    bg: "/Hero/hero-1.png",
   },
   {
     title: "Buy Pallets and Containers In Wholesale,Resell With Confidence.",
     subtitle:
       "Every pallet is graded and manifested so you know exactly what you're buying before it ships no surprises.",
-    bg: "/hero/hero-2.png",
+    bg: "/Hero/hero-2.png",
   },
   {
     title: "Grow Your Business With Bulk Liquidation",
     subtitle:
       "From single pallets to full containers we work with resellers, distributors, and investors at every scale.",
-    bg: "/hero/hero-3.png",
+    bg: "/Hero/hero-3.png",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function HeroSlider() {
         />
       ))}
 
-      {/* Overlay — keeps white text readable over any photo */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-navy-900/60" />
 
       <div className="container-page relative z-10 h-full py-16 sm:py-20 flex items-center">
