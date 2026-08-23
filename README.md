@@ -23,18 +23,17 @@ This project was developed as a **freelance client project**.
 
 ---
 
-## 🎯 Project Highlights
+## Live Preview
 
-- Modern, professional wholesale business website
-- Responsive design across desktop, tablet, and mobile
-- Product-focused inventory presentation
-- Dedicated sections for wholesale categories
-- Clear calls-to-action for potential buyers
-- Professional company presentation and brand positioning
-- Component-based React architecture
-- Fast frontend build and development workflow with Vite
-- Utility-first styling with Tailwind CSS
-- Optimized layout for a clean and seamless user experience
+<p align="center">
+  <a href="https://global-trading-house.vercel.app/" target="_blank">
+    <img
+      src="image.png"
+      alt="Global Trading House Website Preview"
+      width="100%"
+    />
+  </a>
+</p>
 
 ---
 
@@ -51,6 +50,23 @@ The website presents wholesale inventory across multiple categories, including:
 The structure is designed to allow additional inventory categories to be introduced as the business expands.
 
 ---
+
+## 🎯 Project Highlights
+
+- Modern, professional wholesale business website
+- Responsive design across desktop, tablet, and mobile
+- Product-focused inventory presentation
+- Dedicated sections for wholesale categories
+- Clear calls-to-action for potential buyers
+- Professional company presentation and brand positioning
+- Component-based React architecture
+- Fast frontend build and development workflow with Vite
+- Utility-first styling with Tailwind CSS
+- Optimized layout for a clean and seamless user experience
+
+---
+
+
 
 ## 🌍 Business Focus
 
@@ -87,7 +103,7 @@ The project demonstrates practical experience in:
 ## 👩‍💻 Developer
 
 **Imama Ansari**  
-Frontend Web Developer  
+MERN Stack Web Developer and Designer
 
 🔗 Instagram: https://instagram.com/webbyimama
 
