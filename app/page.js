@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import LogoMarquee from "@/components/LogoMarquee";
 import {
   ShieldCheck,
   Globe2,
@@ -65,34 +66,36 @@ export default function HomePage() {
       </section>
 
       {/* About preview */}
-      <section className="py-20 sm:py-28 bg-navy-50">
-        <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
-          <RevealImage
-            src="/brand-logos.png"
-            alt="Global Trading House warehouse"
-            className="h-80 sm:h-96 rounded-2xl shadow-card"
-          />
-          <RevealText>
-            <span className="section-eyebrow">About Our Company</span>
-            <h2 className="section-heading mb-6">
-              Sourcing In Bulk, Directly From America&rsquo;s Leading Retailers
-            </h2>
-            <p className="text-navy-500 leading-relaxed mb-4">
-              {siteConfig.businessName} buys inventory in bulk directly through leading US retailers,
-              turning overstock, returns, and shelf-pulls into reliable wholesale opportunities for
-              buyers worldwide.
-            </p>
-            <p className="text-navy-500 leading-relaxed mb-8">
-              From single pallets to full containers, we work with resellers, distributors, and
-              investors who want consistent access to genuine, graded inventory — without the
-              guesswork.
-            </p>
-            <Link href="/about" className="btn-primary">
-              Learn More About Us <ArrowRight size={18} />
-            </Link>
-          </RevealText>
-        </div>
-      </section>
+<section className="py-20 sm:py-28 bg-navy-50">
+  <div className="container-page">
+    <RevealText className="max-w-2xl mx-auto text-center">
+      <span className="section-eyebrow">About Our Company</span>
+      <h2 className="section-heading mb-6">
+        Sourcing In Bulk, Directly From America&rsquo;s Leading Retailers
+      </h2>
+      <p className="text-navy-500 leading-relaxed mb-4">
+        {siteConfig.businessName} buys inventory in bulk directly through leading US retailers,
+        turning overstock, returns, and shelf-pulls into reliable wholesale opportunities for
+        buyers worldwide.
+      </p>
+      <p className="text-navy-500 leading-relaxed mb-8">
+        From single pallets to full containers, we work with resellers, distributors, and
+        investors who want consistent access to genuine, graded inventory — without the
+        guesswork.
+      </p>
+      <Link href="/about" className="btn-primary">
+        Learn More About Us <ArrowRight size={18} />
+      </Link>
+    </RevealText>
+
+    <div className="mt-16">
+      <p className="text-center text-navy-400 text-sm font-bold uppercase tracking-widest mb-6">
+        America's Largest Retailers
+      </p>
+      <LogoMarquee />
+    </div>
+  </div>
+</section>
 
       {/* Core product categories */}
       <section className="py-20 sm:py-28">
