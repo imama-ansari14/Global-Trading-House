@@ -140,33 +140,33 @@ const products = [
     ],
   },
   {
-  slug: "accessories",
-  name: "Accessories Pallets",
-  shortDesc: "Electronics accessories pallets — cameras, earbuds, headphones, speakers & more.",
-  img: "/accessories/speaker-1.png",
-  hoverImg: "/accessories/camera-1.png",
-  headerImg: "/ProductsHeaders/accessories-header.png",
-  gallery: [
-    { img: "/accessories/camera-1.png", hoverImg: "/accessories/camera-2.png" },
-    { img: "/accessories/earbuds-1.png", hoverImg: "/accessories/earbuds-2.png" },
-    { img: "/accessories/headphone-1.png", hoverImg: "/accessories/headphone-2.png" },
-    { img: "/accessories/speaker-1.png", hoverImg: "/accessories/speaker-2.png" },
-    { img: "/accessories/stand-1.png", hoverImg: "/accessories/stand-2.png" },
-    { img: "/accessories/tripod-1.png", hoverImg: "/accessories/tripod-2.png" },
-  ],
-  description:
-    "A mixed selection of electronics accessories — cameras, earbuds, headphones, speakers, phone/tablet stands, and tripods — sourced from major retailer overstock and returns. A strong add-on category for electronics resellers and general merchandise buyers.",
-  grading: [
-    { grade: "New / Overstock", note: "Unused, original packaging, current stock" },
-    { grade: "Grade A", note: "Like-new, may be missing retail packaging" },
-    { grade: "Grade B", note: "Light wear, fully functional, tested where possible" },
-  ],
-  faqs: [
-    { q: "Are these name-brand electronics?", a: "Yes — inventory is sourced directly through retailer liquidation channels, no counterfeit or unbranded stock." },
-    { q: "Are items tested before shipping?", a: "Condition grading is shared upfront; testing detail varies by pallet and is noted where available." },
-    { q: "Can I mix accessory types in one order?", a: "Most pallets already contain a mixed assortment of accessory types — ask us about the current mix before ordering." },
-  ],
-},
+    slug: "accessories",
+    name: "Accessories Pallets",
+    shortDesc: "Electronics accessories pallets — cameras, earbuds, headphones, speakers & more.",
+    img: "/accessories/speaker-1.png",
+    hoverImg: "/accessories/camera-1.png",
+    headerImg: "/ProductsHeaders/accessories-header.png",
+    gallery: [
+      { img: "/accessories/camera-1.png", hoverImg: "/accessories/camera-2.png" },
+      { img: "/accessories/earbuds-1.png", hoverImg: "/accessories/earbuds-2.png" },
+      { img: "/accessories/headphone-1.png", hoverImg: "/accessories/headphone-2.png" },
+      { img: "/accessories/speaker-1.png", hoverImg: "/accessories/speaker-2.png" },
+      { img: "/accessories/stand-1.png", hoverImg: "/accessories/stand-2.png" },
+      { img: "/accessories/tripod-1.png", hoverImg: "/accessories/tripod-2.png" },
+    ],
+    description:
+      "A mixed selection of electronics accessories — cameras, earbuds, headphones, speakers, phone/tablet stands, and tripods — sourced from major retailer overstock and returns. A strong add-on category for electronics resellers and general merchandise buyers.",
+    grading: [
+      { grade: "New / Overstock", note: "Unused, original packaging, current stock" },
+      { grade: "Grade A", note: "Like-new, may be missing retail packaging" },
+      { grade: "Grade B", note: "Light wear, fully functional, tested where possible" },
+    ],
+    faqs: [
+      { q: "Are these name-brand electronics?", a: "Yes — inventory is sourced directly through retailer liquidation channels, no counterfeit or unbranded stock." },
+      { q: "Are items tested before shipping?", a: "Condition grading is shared upfront; testing detail varies by pallet and is noted where available." },
+      { q: "Can I mix accessory types in one order?", a: "Most pallets already contain a mixed assortment of accessory types — ask us about the current mix before ordering." },
+    ],
+  },
 ];
 
 export default products;

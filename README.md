@@ -66,8 +66,6 @@ The structure is designed to allow additional inventory categories to be introdu
 
 ---
 
-
-
 ## 🌍 Business Focus
 
 Global Trading House sources bulk inventory from leading US retailers and connects that inventory with resellers, distributors, and buyers internationally.
@@ -107,12 +105,11 @@ MERN Stack Web Developer and Designer
 
 🔗 Instagram: https://instagram.com/webbyimama
 
-🔗 LinkedIn: https://www.linkedin.com/in/imama-ansari-5a604b337  
+🔗 LinkedIn: https://www.linkedin.com/in/imama-ansari-5a604b337
 
 ---
 
 <h1 align="center">⭐️ Thank you for visiting My Projects! </h1>
   
 <p align="center">i hope you like My Projects </p> 
-<p align="center">If you find it useful or inspiring, feel free to ⭐️ the repository and share your feedback.  </p> 
-
+<p align="center">If you find it useful or inspiring, feel free to ⭐️ the repository and share your feedback.  </p>

@@ -1,6 +1,4 @@
 // ⭐ Placeholder testimonials — replace with real client reviews when available.
-// "avatar" uses placeholder headshot photos (i.pravatar.cc) — swap for real client
-// photos once available.
 
 const testimonials = [
   {
