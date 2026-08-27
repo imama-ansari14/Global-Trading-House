@@ -1,4 +1,5 @@
 const products = [
+  // SHOES
   {
     slug: "shoes",
     name: "Shoes Pallets",
@@ -27,6 +28,8 @@ const products = [
       { q: "Do you ship internationally?", a: "Yes, we ship worldwide. Reach out with your destination for a freight quote." },
     ],
   },
+
+  // CLOTHES
   {
     slug: "clothes",
     name: "Clothes Pallets",
@@ -55,6 +58,8 @@ const products = [
       { q: "Is there a minimum order?", a: "Minimums depend on current stock. Message us and we'll walk you through current options." },
     ],
   },
+
+  // COSMETICS
   {
     slug: "cosmetics",
     name: "Cosmetics Pallets",
@@ -83,6 +88,8 @@ const products = [
       { q: "Can I get a manifest before purchase?", a: "Yes, a manifest or sample listing is available on request for most pallets." },
     ],
   },
+
+  // BAGS
   {
     slug: "bags",
     name: "Bags Pallets",
@@ -111,6 +118,8 @@ const products = [
       { q: "How is freight handled?", a: "We coordinate freight quotes based on your delivery location once you confirm an order." },
     ],
   },
+
+  // POWER TOOLS
   {
     slug: "power-tools",
     name: "Power Tools Pallets",
@@ -139,6 +148,8 @@ const products = [
       { q: "What brands are typically included?", a: "A mix of well-known power tool brands, depending on current retailer liquidation stock." },
     ],
   },
+
+  // ACCESSORIES
   {
     slug: "accessories",
     name: "Accessories Pallets",

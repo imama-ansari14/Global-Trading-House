@@ -2,8 +2,8 @@ import siteConfig from "@/data/siteConfig";
 
 export default function WhatsAppButton() {
   return (
-    
-     <a href={siteConfig.whatsappLink}
+    <a
+      href={siteConfig.whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"

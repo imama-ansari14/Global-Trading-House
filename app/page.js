@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import LogoMarquee from "@/components/LogoMarquee";
 import {
   ShieldCheck,
@@ -37,7 +36,7 @@ const offers = [
 
 const whyChoose = [
   "Direct sourcing relationships with leading US retailers",
-  "Transparent, upfront pricing — no hidden fees",
+  "Transparent, upfront pricing no hidden fees",
   "Fast responses via WhatsApp, 24/7 availability",
   "Reliable freight coordination worldwide",
 ];
@@ -59,7 +58,7 @@ export default function HomePage() {
         <div className="container-page text-center">
           <p className="text-navy-200 text-sm sm:text-base font-medium tracking-wide">
             Bulk sourcing partner working directly with{" "}
-            <span className="text-white font-bold">major US retailers</span> — trusted by buyers in{" "}
+            <span className="text-white font-bold">major US retailers</span> trusted by buyers in{" "}
             <span className="text-white font-bold">30+ countries</span>
           </p>
         </div>

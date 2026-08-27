@@ -1,4 +1,4 @@
-// ⭐ Placeholder testimonials — replace with real client reviews when available.
+// TESTIMONALS DATA
 
 const testimonials = [
   {
