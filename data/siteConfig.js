@@ -3,7 +3,7 @@
 const siteConfig = {
   businessName: "Global Trading House LLC USA",
   tagline: "Bulk Sourcing. Direct From Leading US Retailers.",
-  domain: "https://www.globaltradinghouseusa.com", // TODO: replace with real domain
+  domain: "https://www.theglobaltradinghouse.com", // TODO: replace with real domain
   phoneDisplay: "+1 (202) 676-6624",
   phoneRaw: "12026766624",
   whatsappLink: "https://wa.me/12026766624",
